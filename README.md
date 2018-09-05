@@ -5,3 +5,10 @@ This is a working example using Spring Boot 2.0.4 (spring-boot-starter-data-mong
 Credit goes to this blog post: http://www.javaoptimum.com/multiple-mongodb-connections-spring-boot/ for the majority of the work.
 
 One minor change was made as the MongoProperties.createMongoClient() method appears to have been removed since that blog post.
+
+```
+docker-compose -f src/main/docker/mongodb.yml
+mvn test
+```
+
+In Mongo there should now be two databases: 'db1' with a 'product' collection and 'db2' with a 'user' collection.
